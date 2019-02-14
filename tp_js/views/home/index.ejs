@@ -6,7 +6,7 @@
 </head>
 <body>
   <h1>Page D'accueil</h1>
-  <a class="btn btn-primary" href="/deco" role="button">Deconnexion</a>
+  <a class="btn btn-danger" href="/deco" role="button">Deconnexion</a>
 <table class="table" style="margin-top: 20px">
   <thead class="thead-dark">
   <tr>
@@ -24,9 +24,9 @@
       <td><%- conference[conf].date %></td>
       <td><%- conference[conf].debutConf %></td>
       <td><%- conference[conf].finConf %></td>
-      <td><a class="btn btn-primary" role="button"><%- conference[conf].participants.length %></a></td>
+      <td><a class="btn btn-info" role="button"><%- conference[conf].participants.length %></a></td>
       <td><a class="btn btn-primary" href=<%-"/users/subConf/" +conf %> role="button">Inscription à la Conférence</a></td>
-      <td><a class="btn btn-primary" href=<%-"/users/desubConf/" +conf %> role="button">Se désincrire de la Conférence</a></td>
+      <td><a class="btn btn-danger" href=<%-"/users/desubConf/" +conf %> role="button">Se désincrire de la Conférence</a></td>
     </tr>
   <% } %>
   

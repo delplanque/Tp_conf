@@ -7,7 +7,7 @@
 <body>
     <h1>Panneau Administrateur</h1>
 <a class="btn btn-primary" href="/admin/create" role="button">Créer une Conférence</a>
-<a class="btn btn-primary" href="/deco" role="button">Deconnexion</a>
+<a class="btn btn-danger" href="/deco" role="button">Deconnexion</a>
 <table class="table" style="margin-top: 20px">
   <thead class="thead-dark">
   <tr>
@@ -26,7 +26,7 @@
       <td><%- conference[conf].date %></td>
       <td><%- conference[conf].debutConf %></td>
       <td><%- conference[conf].finConf %></td>
-      <td><a class="btn btn-primary" href=<%-"/admin/details/" +conf %> role="button"><%- conference[conf].participants.length %></a></td>
+      <td><a class="btn btn-info" href=<%-"/admin/details/" +conf %> role="button"><%- conference[conf].participants.length %></a></td>
     </tr>
   <% } %>
   

@@ -42,7 +42,9 @@ const conference = [
 ]
 
 router.post('/connect', (req, res, next) => {
-    if(req.cookies.userData === null){
+  console.log('cookie')
+  console.log(req.cookies.userData)
+    if(req.cookies.userData === undefined){
       res.cookie("userData", users);
       res.cookie("confData", conference);
     }
@@ -136,7 +138,7 @@ router.get('/subConf/:id', (req, res, next) => {
 router.get('/desubConf/:id', (req, res, next) => {
   let id = req.params.id;
   let isInConf = false
-  console.log('here')
+
   user = req.cookies.userData
   conferences = req.cookies.confData
   userActif = req.cookies.userActif
