@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+  </head>
+  <body>
+    <form action="/admin/create" method="POST">
+      <div class="form-group">
+        <label for="InputTitle">Nom de la Conférence</label>
+        <input type="text" class="form-control" name="title" id="InputTitle">
+      </div>
+      <div class="form-group">
+        <label for="InputDescr">Détails</label>
+        <input type="text" class="form-control" name="descr" id="InputDescr">
+      </div>
+      <div class="form-group">
+        <label for="InputDate">Date</label>
+        <input type="text" class="form-control" name="date" id="InputDate">
+      </div>
+      <div class="form-group">
+        <label for="InputHeureDebut">Heure Début</label>
+        <input type="text" class="form-control" name="heuredebut" id="InputHeureDebut">
+      </div>
+      <div class="form-group">
+        <label for="InputHeureFin">Heure Fine</label>
+        <input type="text" class="form-control" name="heurefin" id="InputHeureFin">
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Panneau Administrateur</h1>
+<a class="btn btn-primary" href="/admin/create" role="button">Créer une Conférence</a>
+<a class="btn btn-primary" href="/deco" role="button">Deconnexion</a>
+<table class="table" style="margin-top: 20px">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Nom de la conf</th>
+    <th scope="col">Description</th>
+    <th scope="col">Date</th>
+    <th scope="col">Début de ConF</th>
+    <th scope="col">Fin de Conf</th>
+    <th scope="col">nombres de participants</th>
+  </tr>
+  <% var i = 0 %>
+  <% for (var conf in conference ) { %>
+    <tr>
+      <td><%- conference[conf].title %></td>
+      <td><%- conference[conf].description %></td>
+      <td><%- conference[conf].date %></td>
+      <td><%- conference[conf].debutConf %></td>
+      <td><%- conference[conf].finConf %></td>
+      <td><a class="btn btn-primary" href=<%-"/admin/details/" +conf %> role="button"><%- conference[conf].participants.length %></a></td>
+    </tr>
+  <% } %>
+  
+  </thead>
+</table>
+</body>
+</html>
